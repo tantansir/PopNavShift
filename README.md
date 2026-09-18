@@ -2,7 +2,11 @@
 
 **Stress-Testing Social Navigation under Behavioral Population Shift**
 
-Kaizhen Tan, Diyu Zheng, Tim Guangyu Wu, ChengHe Guan
+Kaizhen Tan<sup>1,2</sup>, Diyu Zheng<sup>1,2</sup>, Tim Guangyu Wu<sup>1,2</sup>, ChengHe Guan<sup>2,3</sup>
+
+<sup>1</sup> Robert F. Wagner Graduate School of Public Service, New York University, New York, NY, USA<br>
+<sup>2</sup> Shanghai Key Laboratory of Urban Design and Urban Science, NYU Shanghai, Shanghai, China<br>
+<sup>3</sup> Division of Arts and Sciences, NYU Shanghai, Shanghai, China
 
 [Project webpage](https://tantansir.github.io/PopNavShift/) · [Paper](https://tantansir.github.io/PopNavShift/assets/PopNavShift.pdf) · [Video](https://tantansir.github.io/PopNavShift/assets/PopNavShift_ICRA_video.mp4) · [LaTeX source ZIP](https://tantansir.github.io/PopNavShift/assets/PopNavShift_arXiv.zip)
 
