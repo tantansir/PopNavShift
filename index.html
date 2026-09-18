@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2629">
+  <meta name="description" content="PopNavShift tests whether social navigation controller comparisons remain stable when the represented pedestrian population changes.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PopNavShift: Stress-Testing Social Navigation under Behavioral Population Shift">
+  <meta property="og:description" content="Matched simulation reveals how behavioral population shift changes the evaluation of social navigation strategies.">
+  <meta property="og:url" content="https://tantansir.github.io/PopNavShift/">
+  <meta property="og:image" content="https://tantansir.github.io/PopNavShift/assets/video-poster.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>PopNavShift · Behavioral Population Shift in Social Navigation</title>
+  <link rel="canonical" href="https://tantansir.github.io/PopNavShift/">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header-surface">
+    <div class="site-header shell">
+      <a class="wordmark" href="#top" aria-label="PopNavShift home">PopNavShift</a>
+      <nav aria-label="Main navigation">
+        <a href="#framework">Framework</a>
+        <a href="#results">Findings</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="opening">
+      <section class="hero shell" id="top" aria-labelledby="project-title">
+        <h1 id="project-title">
+          <span class="project-name">PopNavShift</span>
+          <span class="project-title">Stress-Testing Social Navigation<br class="desktop-break"> under <span>Behavioral Population Shift</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <ul class="authors" aria-label="Authors">
+            <li>Kaizhen Tan</li>
+            <li>Diyu Zheng</li>
+            <li>Tim Guangyu Wu</li>
+            <li>ChengHe Guan</li>
+          </ul>
+          <div class="hero-actions">
+            <a class="button button-light" href="assets/PopNavShift.pdf">Read the paper <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="#video" data-play-video>Watch the video <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="video-section shell" id="video" aria-label="Research framework and simulation video">
+        <div class="video-frame">
+          <video id="project-video" controls playsinline preload="none" poster="assets/video-poster.webp" width="1920" height="1080" aria-label="PopNavShift research framework and matched simulation demonstration" aria-describedby="video-description">
+            <source src="assets/PopNavShift_ICRA_video.mp4" type="video/mp4">
+            Your browser does not support embedded video. <a href="assets/PopNavShift_ICRA_video.mp4">Download the MP4 video</a>.
+          </video>
+        </div>
+        <div class="video-caption" id="video-description">
+          <p>Framework and matched simulation replay</p>
+          <a href="assets/PopNavShift_ICRA_video.mp4" download>Download video <span aria-hidden="true">↗</span></a>
+        </div>
+        <details class="video-transcript">
+          <summary>Read the video transcript <span aria-hidden="true">+</span></summary>
+          <div class="transcript-copy">
+            <p>Would the same robot controller still perform best if the pedestrians around it behaved differently? This is Pop Nav Shift.</p>
+            <p>We start with six hundred synthetic persona records. Standardized robot encounter probes elicit structured responses. A deterministic mapping converts them into seven bounded motion controls, including speed, clearance, and yielding. Eight population conditions change which profiles are represented.</p>
+            <p>Identical physical encounters are replayed under reactive geometric, early yielding, and Robot Orca controllers. A matched run without a robot measures added pedestrian delay.</p>
+            <p>The controlled intervention changes only time pressure in the same two hundred and two persona records. We repeat the probes and mapping, then replay the same encounters. Watch how changed pedestrian responses interact with each controller.</p>
+            <p>Changing time pressure reverses twenty two point four percent of mean pedestrian delay orderings, and twenty three point nine percent of worst decile delay orderings. Robot travel time orderings reverse in eight point six percent. Across all population pairs, pedestrian burden rankings also change more often than robot travel time rankings.</p>
+            <p>Population sensitivity is greater in narrow sidewalks and bottlenecks, where limited space amplifies behavioral differences. Mean delay can also hide concentrated burden in the worst decile.</p>
+            <p>Alternative mappings, pedestrian dynamics, and language models preserve the qualitative pattern. They still change the magnitudes of ranking reversals and the ordering of particular controllers.</p>
+            <p>These are controlled synthetic populations. Changing their time pressure does not estimate the causal effect of deadlines on real pedestrians.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+
+      <section class="question section shell" aria-labelledby="question-title">
+        <h2 id="question-title">Do controller comparisons change when the pedestrian population changes?</h2>
+        <div class="question-copy">
+          <p>People differ in how closely they pass a robot, when they yield, and how quickly they move. Evaluation under one behavioral distribution can hide how these differences affect comparisons between navigation strategies.</p>
+          <p>PopNavShift replays the same physical encounters with different pedestrian populations. Geometry, initial conditions, and robot controllers stay fixed, allowing us to examine changes in robot performance alongside the burden placed on pedestrians.</p>
+        </div>
+      </section>
+
+      <section class="framework section shell" id="framework" aria-labelledby="framework-title">
+        <div class="section-intro">
+          <h2 id="framework-title">From persona records<br>to matched encounters.</h2>
+          <p>Standardized robot encounter probes turn synthetic persona records into structured responses. A deterministic mapping converts those responses into bounded pedestrian motion profiles.</p>
+        </div>
+        <figure class="framework-figure">
+          <a class="figure-link" href="assets/framework.webp" aria-label="Open the complete PopNavShift framework figure">
+            <img src="assets/framework.webp" width="2800" height="1750" loading="lazy" decoding="async" alt="PopNavShift framework: persona records pass through robot encounter probes and a deterministic bounded mapping to produce pedestrian motion profiles. A matched time-pressure intervention changes the same records. Identical encounters are replayed with reactive geometric, early yielding, and Robot-ORCA controllers.">
+          </a>
+        </figure>
+        <div class="framework-notes">
+          <div>
+            <h3>Change the population</h3>
+            <p>Eight conditions represent different distributions of pedestrian behavior. The matched intervention changes only time pressure for the same persona records.</p>
+          </div>
+          <div>
+            <h3>Keep the comparison matched</h3>
+            <p>Three controllers face identical physical episodes. Pedestrian added delay is measured against a matched baseline without a robot.</p>
+          </div>
+        </div>
+        <details class="profile-details">
+          <summary>Explore the pedestrian motion profiles <span aria-hidden="true">+</span></summary>
+          <figure>
+            <img src="assets/profiles.webp" width="2800" height="1131" loading="lazy" decoding="async" alt="Pedestrian motion profiles across eight population conditions and the distributions before and after the matched time-pressure intervention.">
+            <figcaption>Population conditions change the represented distribution of speed, clearance, avoidance, yielding, reaction delay, detour threshold, and gap acceptance.</figcaption>
+          </figure>
+        </details>
+      </section>
+
+      <section class="results section" id="results" aria-labelledby="results-title">
+        <div class="shell">
+          <div class="section-intro">
+            <h2 id="results-title">Pedestrian burden rankings<br>change more often.</h2>
+            <p>Changing time pressure for the same personas reverses controller orderings more often for pedestrian delay than for robot travel time.</p>
+          </div>
+          <dl class="result-grid" aria-label="Controller-ranking reversal rates under the matched time-pressure intervention">
+            <div class="result-item">
+              <dt>Mean pedestrian delay</dt>
+              <dd>22.4<span>%</span></dd>
+            </div>
+            <div class="result-item">
+              <dt>Worst-decile delay</dt>
+              <dd>23.9<span>%</span></dd>
+            </div>
+            <div class="result-item robot-result">
+              <dt>Robot travel time</dt>
+              <dd>8.6<span>%</span></dd>
+            </div>
+          </dl>
+          <p class="result-definition">Rates are measured over comparable, non-tied controller orderings. Worst-decile delay captures the most delayed tenth of pedestrians.</p>
+          <div class="results-copy">
+            <p>The higher sensitivity of pedestrian burden also appears across population pairs. Population effects are larger in narrow sidewalks and bottlenecks, where some of the stronger effect coincides with controller failures.</p>
+            <p>Alternative mappings, a second pedestrian dynamics model, and a second language model preserve the qualitative pattern. Reversal magnitudes and some controller orderings change across these specifications.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources section shell" id="resources" aria-labelledby="resources-title">
+        <div class="resource-copy">
+          <h2 id="resources-title">Read the study.<br>Explore the evaluation.</h2>
+          <p id="availability">The complete implementation and exact response-to-motion formulas will be released upon publication.</p>
+          <div class="resource-links">
+            <a class="text-link" href="assets/PopNavShift.pdf">Manuscript <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="assets/PopNavShift_ICRA_video.mp4" download>Video <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="boundary" aria-labelledby="boundary-title">
+          <h3 id="boundary-title">Scope of the results</h3>
+          <p>These behavioral populations are controlled synthetic inputs. They are not estimates of particular cities, cultures, or demographic groups.</p>
+          <p>The matched intervention does not estimate the causal effect of deadlines on real pedestrians. The persona-to-motion pipeline has not been calibrated against joint observations from the same participants.</p>
+        </aside>
+        <details class="citation">
+          <summary>Cite this work <span aria-hidden="true">+</span></summary>
+          <div class="citation-body">
+            <pre><code id="citation-text">@misc{tan2026popnavshift,
+  title = {PopNavShift: Stress-Testing Social Navigation
+           under Behavioral Population Shift},
+  author = {Tan, Kaizhen and Zheng, Diyu and
+            Wu, Tim Guangyu and Guan, ChengHe},
+  year = {2026}
+}</code></pre>
+            <button class="copy-button" type="button" data-copy-citation>Copy BibTeX</button>
+            <span class="copy-status" role="status" aria-live="polite"></span>
+          </div>
+        </details>
+      </section>
+    </main>
+
+  <footer class="site-footer shell">
+    <a class="wordmark" href="#top">PopNavShift</a>
+    <p>Kaizhen Tan · Diyu Zheng · Tim Guangyu Wu · ChengHe Guan</p>
+    <a class="repository-link" href="https://github.com/tantansir/PopNavShift">Website source <span aria-hidden="true">↗</span></a>
+  </footer>
+</body>
+</html>
