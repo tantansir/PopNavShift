@@ -41,12 +41,6 @@ h3 { font-size: 22px; letter-spacing: -.018em; line-height: 1.3; }
 .project-title { display: block; margin-top: 23px; max-width: 1060px; font-size: clamp(29px, 3.1vw, 43px); line-height: 1.22; letter-spacing: -.036em; }
 .project-title > span { color: var(--mint); }
 .hero-bottom { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-top: 36px; }
-.authors { display: flex; flex-wrap: wrap; column-gap: 24px; row-gap: 7px; padding: 0; margin: 0 0 8px; list-style: none; color: #d8e5de; font-size: 17px; }
-.authors li { white-space: nowrap; }
-.authors sup { margin-left: 3px; font-size: .65em; color: var(--mint); }
-.affiliations { margin-top: 18px; color: #b5cac4; font-size: 14px; line-height: 1.65; }
-.affiliations p + p { margin-top: 3px; }
-.affiliations sup { color: var(--mint); }
 .hero-actions { display: flex; gap: 12px; flex-shrink: 0; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 48px; padding: 10px 20px; border: 1px solid transparent; border-radius: 5px; font-size: 16px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background .2s, border-color .2s, transform .2s; }
 .button:hover { transform: translateY(-2px); }
@@ -111,7 +105,6 @@ pre { overflow-x: auto; margin: 0 0 20px; padding: 22px 25px; border-radius: 5px
 .copy-button:hover { background: #e4eee3; }
 .copy-status { font-size: 16px; margin-left: 14px; color: var(--accent); }
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 24px; border-top: 1px solid var(--line); padding-block: 30px 40px; }
-.site-footer p { font-size: 15px; color: var(--muted); }
 .repository-link { font-size: 15px; color: var(--muted); text-decoration: none; }
 .repository-link:hover { text-decoration: underline; }
 .reveal-ready { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
@@ -135,7 +128,6 @@ pre { overflow-x: auto; margin: 0 0 20px; padding: 22px 25px; border-radius: 5px
   .project-title { font-size: clamp(27px, 4.3vw, 36px); max-width: 640px; }
   .desktop-break { display: none; }
   .hero-bottom { margin-top: 27px; }
-  .authors { font-size: 16px; column-gap: 22px; }
   .opening { padding-bottom: 26px; }
   .video-caption { font-size: 15px; }
   .section { padding-block: 74px; }
@@ -164,7 +156,6 @@ pre { overflow-x: auto; margin: 0 0 20px; padding: 22px 25px; border-radius: 5px
   .hero { padding-top: 39px; }
   .project-name { font-size: clamp(50px, 13vw, 63px); }
   .project-title { margin-top: 21px; font-size: 29px; line-height: 1.22; }
-  .authors { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; row-gap: 6px; }
   .hero-actions { width: 100%; gap: 9px; }
   .button { gap: 11px; padding-inline: 14px; font-size: 15px; min-height: 47px; }
   .video-caption { align-items: start; font-size: 14px; gap: 20px; }
@@ -184,7 +175,6 @@ pre { overflow-x: auto; margin: 0 0 20px; padding: 22px 25px; border-radius: 5px
   .result-definition { font-size: 15px; }
   .resources { gap: 31px; }
   .boundary p { font-size: 16px; }
-  .site-footer p { font-size: 14px; line-height: 1.7; }
 }
 @media (max-width: 360px) {
   .hero-actions { display: grid; grid-template-columns: 1fr; }
