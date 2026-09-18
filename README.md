@@ -8,7 +8,7 @@ Kaizhen Tan<sup>1,2</sup>, Diyu Zheng<sup>1,2</sup>, Tim Guangyu Wu<sup>1,2</sup
 <sup>2</sup> Shanghai Key Laboratory of Urban Design and Urban Science, NYU Shanghai, Shanghai, China<br>
 <sup>3</sup> Division of Arts and Sciences, NYU Shanghai, Shanghai, China
 
-[Project webpage](https://tantansir.github.io/PopNavShift/) · [Paper](https://tantansir.github.io/PopNavShift/assets/PopNavShift.pdf) · [Video](https://tantansir.github.io/PopNavShift/assets/PopNavShift_ICRA_video.mp4) · [LaTeX source ZIP](https://tantansir.github.io/PopNavShift/assets/PopNavShift_arXiv.zip)
+[Project webpage](https://tantansir.github.io/PopNavShift/) · [Paper](https://tantansir.github.io/PopNavShift/assets/PopNavShift.pdf) · [Video](https://tantansir.github.io/PopNavShift/assets/PopNavShift_ICRA_video.mp4)
 
 ## Overview
 
@@ -34,9 +34,7 @@ The behavioral populations are controlled synthetic inputs. The matched interven
 
 ## Materials and Code Availability
 
-This repository hosts the project webpage, manuscript, LaTeX source package, figures, and demonstration video. The complete implementation and exact response-to-motion formulas will be released upon publication.
-
-The source ZIP includes `root.tex`, bibliography files, the document class, and all four manuscript figures. Compile `root.tex` with pdfLaTeX after extracting the ZIP, or upload the ZIP to Overleaf.
+This repository hosts the project webpage, manuscript PDF, figures, and demonstration video. The complete implementation and exact response-to-motion formulas will be released upon publication.
 
 The webpage uses plain HTML, CSS, and JavaScript and is served through GitHub Pages from the root of the `main` branch.
 
